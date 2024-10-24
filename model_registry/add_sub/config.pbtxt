@@ -1,0 +1,33 @@
+name: "add_sub"
+platform: "python"
+default_model_filename: "model.py"
+input [
+  {
+    name: "input_a"
+    data_type: TYPE_FP32
+    dims: [ 4 ]
+  }
+]
+input [
+  {
+    name: "input_b"
+    data_type: TYPE_FP32
+    dims: [ 4 ]
+  }
+]
+output [
+  {
+    name: "add"
+    data_type: TYPE_FP32
+    dims: [ 4 ]
+  }
+]
+output [
+  {
+    name: "sub"
+    data_type: TYPE_FP32
+    dims: [ 4 ]
+  }
+]
+
+instance_group [{ kind: KIND_CPU }]
